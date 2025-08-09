@@ -17,7 +17,7 @@ def create_app():
         user = {
         'name': 'Walter White',
         'email': 'heisenberg@example.com',
-        'joined_date': '2025-08-08'
+        'joined_date': '2025-08-10'
         }
         return render_template('profile.html', user=user)
     
