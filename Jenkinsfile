@@ -14,24 +14,6 @@ pipeline{
                 }
             }
         }
-        stage('Push Docker Image') {
-            steps {
-                script {
-                    docker.withRegistry('https://my-registry.com', 'my-credentials') {
-                        dockerImage.push()
-                    }
-                }
-            }
-        }
-        stage('Deploy Docker Image') {
-            steps {
-                script {
-                    docker.withRegistry('https://my-registry.com', 'my-credentials') {
-                        dockerImage.push("latest")
-                    }
-                }
-            }
-        }
         stage('Test Docker Image') {
             steps {
                 script {
