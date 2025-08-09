@@ -7,9 +7,9 @@ pipeline{
                 checkout scm
             }
         }
-        stage(Build Docker Image){
-            steps{
-                script{
+        stage('Build Docker Image') {
+            steps {
+                script {
                     dockerImage = docker.build("my-image:${env.BUILD_ID}")
                 }
             }
