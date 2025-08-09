@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ffb347;
+            box-shadow: 0 4px 12px rgba(255,179,71,0.2);
+            object-fit: cover;
+            margin-bottom: 18px;
+        }
+        h2 {
+            color: #ff6f61;
+            margin-bottom: 8px;
+        }
+        .info {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 16px;
+        }
+        .btn {
+            background: linear-gradient(90deg, #ff6f61 0%, #ffb347 100%);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 28px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #ffb347 0%, #ff6f61 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Walter_White_S5B.png/250px-Walter_White_S5B.png" alt="Avatar" class="avatar">
+        <h2>{{ user.name }}</h2>
+        <div class="info">Email: {{ user.email }}</div>
+        <div class="info">Joined: {{ user.joined_date }}</div>
+        <button class="btn">Edit Profile</button>
+        <div style="margin-top:18px;">
+            <a href="{{ url_for('home') }}" style="text-decoration:none; font-weight:bold; color:#ff6f61;">&larr; Back Home</a>
+        </div>
+    </div>
+</body>
+</html>

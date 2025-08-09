@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+            max-width: 350px;
+            margin: 80px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #2980b9;
+            margin-bottom: 24px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #b2bec3;
+            border-radius: 6px;
+            background: #f1f2f6;
+            font-size: 16px;
+        }
+        .login-link {
+            display: block;
+            width: 95%;
+            padding: 10px;
+            background: #2980b9;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 16px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .login-link:hover {
+            background: #2471a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <a class="login-link" href="{{ url_for('home') }}">Login</a>
+        </form>
+    </div>
+</body>
+</html>

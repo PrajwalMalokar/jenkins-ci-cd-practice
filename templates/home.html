@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Home Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #34495e;
+            margin-top: 50px;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 8px #b2bec3;
+        }
+        p {
+            color: #636e72;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .container {
+            background: linear-gradient(120deg, #ffffff 60%, #e0eafc 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+            display: inline-block;
+            padding: 50px 70px;
+            margin-top: 60px;
+            border: 2px solid #74b9ff;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            margin-top: 25px;
+            background: linear-gradient(90deg, #74b9ff 0%, #81ecec 100%);
+            color: #2d3436;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #81ecec 0%, #74b9ff 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Flask Home Page!</h1>
+        <p>This is the main page of my Flask application.</p>
+    <a href="{{ url_for('profile') }}" class="btn">View Profile</a>
+    </div>
+</body>
+</html>
